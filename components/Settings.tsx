@@ -38,10 +38,7 @@ const Settings: React.FC<SettingsProps> = ({ isOpen, onClose, users, setUsers, p
   };
 
   const clearUsers = () => {
-    // Explicitly create a new empty array to ensure state update
-    if (window.confirm('确定要清空所有人员吗？')) {
       setUsers([]);
-    }
   };
 
   // Prizes Logic
