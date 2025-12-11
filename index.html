@@ -1,63 +1,72 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nebula Luck | 赛博抽奖系统</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
-    <style>
-      /* Global FUI Overrides */
-      body {
-        background-color: #030712;
-        color: #e2e8f0;
-        font-family: 'Rajdhani', sans-serif;
-        overflow: hidden; /* Prevent scroll on main view */
-      }
-      .font-orbitron {
-        font-family: 'Orbitron', sans-serif;
-      }
-      
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0f172a; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #06b6d4; 
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #22d3ee; 
-      }
 
-      /* CRT Scanline Effect */
-      .scanlines::before {
-        content: " ";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-        z-index: 50;
-        background-size: 100% 2px, 3px 100%;
-        pointer-events: none;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nebula Luck | 赛博抽奖系统</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;500;700&display=swap"
+    rel="stylesheet">
+  <style>
+    /* Global FUI Overrides */
+    body {
+      background-color: #030712;
+      color: #e2e8f0;
+      font-family: 'Rajdhani', sans-serif;
+      overflow: hidden;
+      /* Prevent scroll on main view */
+    }
 
-      /* 3D Scene Preservation */
-      .preserve-3d {
-        transform-style: preserve-3d;
-      }
-      .backface-hidden {
-        backface-visibility: hidden;
-      }
-    </style>
+    .font-orbitron {
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #06b6d4;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #22d3ee;
+    }
+
+    /* CRT Scanline Effect */
+    .scanlines::before {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+      z-index: 50;
+      background-size: 100% 2px, 3px 100%;
+      pointer-events: none;
+    }
+
+    /* 3D Scene Preservation */
+    .preserve-3d {
+      transform-style: preserve-3d;
+    }
+
+    .backface-hidden {
+      backface-visibility: hidden;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -74,7 +83,10 @@
 }
 </script>
 </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>
